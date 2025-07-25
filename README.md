@@ -1,0 +1,2 @@
+I'm using this repository to work through the Advent of Code challenges as a way to learn and practice the Rust programming language. Each subfolder (e.g., a001, a002, etc.) contains a standalone Rust project corresponding to a specific day's puzzle. This approach allows me to explore core Rust concepts such as ownership, borrowing, pattern matching, iterators, and error handling in a hands-on, problem-solving context. By tackling these progressively challenging problems, I'm building confidence and fluency in Rust while developing clean, idiomatic solutions.
+
