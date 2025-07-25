@@ -22,7 +22,6 @@ fn main() -> io::Result<()> {
         report.clear(); // Clear the report for the next line
     }
     println!("Number of safe reports: {}", safe_reports);
-    //println!("{}", increasing_or_decreasing(&report));
     Ok(())
     
 }
