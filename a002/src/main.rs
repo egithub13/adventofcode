@@ -27,7 +27,7 @@ fn main() -> io::Result<()> {
 }
 
 
-fn safe_or_unsafe(report: &Vec<i32>) -> bool {
+fn safe_or_unsafe(report: &[i32]) -> bool {
     let mut increasing = true;
     let mut decreasing = true;
 
