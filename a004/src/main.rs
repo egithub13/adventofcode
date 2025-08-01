@@ -9,7 +9,7 @@ fn read_grid_from_file(filename: &str) -> io::Result<Vec<Vec<char>>> {
 
     let grid = reader
         .lines()
-        .filter_map(Result::ok)
+        .map_while(Result::ok)
         .map(|line| line.chars().collect())
         .collect();
 
@@ -37,14 +37,14 @@ fn count_xmas(grid: &[Vec<char>]) -> usize {
         for col in 0..cols {
             for &(dr, dc) in &directions {
                 let mut found = true;
-                for i in 0..target.len() {
+                for (i, &ch) in target.iter().enumerate() {
                     let nr = row as isize + dr * i as isize;
                     let nc = col as isize + dc * i as isize;
                     if nr < 0 || nc < 0 || nr >= rows as isize || nc >= cols as isize {
                         found = false;
                         break;
                     }
-                    if grid[nr as usize][nc as usize] != target[i] {
+                    if grid[nr as usize][nc as usize] != ch {
                         found = false;
                         break;
                     }
